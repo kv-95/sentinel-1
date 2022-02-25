@@ -26,6 +26,8 @@ class Download:
         Date1 = input("Enter start date (Format:YYYYMMDD)")
         Date2 = input("Enter end date (Format:YYYYMMDD)")
         
+        # ordered dictionary to store the data specification from the query result.
+        # print this to find the product specification and accordingly you can sort the products of your choice.
         self.products = self.api.query(self.footprint,
                              date = (Date1,Date2),
                              platformname = 'Sentinel-1'
