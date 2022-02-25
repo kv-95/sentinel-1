@@ -41,7 +41,7 @@ class Download:
         for i in range(len(self.productsID)):
             x = self.products[self.productsID[i]]['beginposition']
             month = int(x.strftime("%m"))
-            if self.products[self.productsID[i]]["producttype"] == "GRDH" and products[productsID[i]]["sensoroperationalmode"] == "IW":
+            if self.products[self.productsID[i]]["producttype"] == "GRDH" and self.products[self.productsID[i]]["sensoroperationalmode"] == "IW":
                 self.GRD_products.setdefault(month, list()).append(self.productsID[i])
     
     # Download the data, one image per month
